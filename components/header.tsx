@@ -2,22 +2,14 @@ import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
-import Image from "next/image"
 
 export function Header() {
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 sticky top-0 z-50 shadow-lg">
-      <div className="container flex h-24 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
-          <div className="h-20 w-[500px]">
-            <Image
-              src="/images/econova-logo.png"
-              alt="ECONOVA Environment Logo"
-              width={1200}
-              height={360}
-              className="h-full w-full object-contain"
-              priority
-            />
+          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            ENVIRONMENT ECONOVA
           </div>
         </Link>
 

@@ -10,12 +10,12 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="h-16 w-64">
+              <div className="h-24 w-96">
                 <Image
                   src="/images/econova-logo.png"
                   alt="ECONOVA Environment Logo"
-                  width={600}
-                  height={180}
+                  width={1800}
+                  height={540}
                   className="h-full w-full object-contain"
                 />
               </div>
