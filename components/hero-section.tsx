@@ -15,7 +15,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-24 pb-20 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -27,7 +27,7 @@ export function HeroSection() {
         >
           <source src="/placeholder.mp4?query=sustainable business environment corporate innovation" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 via-blue-600/80 to-teal-600/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-green-50/90 to-blue-50/85"></div>
       </div>
 
       <div className="container max-w-6xl mx-auto relative z-20 px-4">
@@ -36,35 +36,42 @@ export function HeroSection() {
             <Image
               src="/images/econova-logo.png"
               alt="ECONOVA Environment Logo"
-              width={300}
-              height={90}
-              className="drop-shadow-2xl"
+              width={400}
+              height={120}
+              className="drop-shadow-lg"
               priority
             />
           </div>
 
           <div className="flex-1">
             <h1
-              className="text-4xl md:text-6xl font-bold text-balance mb-6 text-white animate-fade-in drop-shadow-2xl relative z-30"
+              className="text-4xl md:text-6xl font-bold text-balance mb-6 animate-fade-in drop-shadow-sm relative z-30"
               style={{ transform: `translateY(${scrollY * -0.2}px)` }}
             >
-              <span className="text-white drop-shadow-lg">Innovación y Cumplimiento para un Futuro Sostenible</span>
+              <span className="bg-gradient-to-r from-green-600 via-blue-600 to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
+                Innovación y Cumplimiento para un Futuro Sostenible
+              </span>
             </h1>
 
             <p
-              className="text-xl md:text-2xl text-white max-w-4xl text-balance mb-6 animate-slide-up drop-shadow-lg font-medium relative z-30"
+              className="text-xl md:text-2xl max-w-4xl text-balance mb-6 animate-slide-up font-medium relative z-30"
               style={{ transform: `translateY(${scrollY * -0.1}px)` }}
             >
-              En Econova, impulsamos la sostenibilidad y el cumplimiento normativo en las organizaciones. Desarrollamos
-              soluciones integrales que optimizan el rendimiento ambiental y social, garantizando un futuro más verde y
-              rentable para nuestros clientes.
+              <span className="text-gray-700">
+                Impulsamos la sostenibilidad y cumplimiento normativo con soluciones integrales que optimizan el
+                rendimiento ambiental y social.
+              </span>
             </p>
             <p
-              className="text-lg text-white max-w-4xl text-balance mb-8 animate-slide-up drop-shadow-lg relative z-30"
+              className="text-lg max-w-4xl text-balance mb-8 animate-slide-up relative z-30"
               style={{ transform: `translateY(${scrollY * -0.05}px)` }}
             >
-              <strong>Claridad técnica. Resultados verificables.</strong> Conectamos lo que exige la autoridad, lo que
-              valora la banca y lo que tu operación necesita para crecer con menos riesgo y más certidumbre.
+              <span className="bg-gradient-to-r from-green-700 to-blue-700 bg-clip-text text-transparent font-bold">
+                Claridad técnica. Resultados verificables.
+              </span>
+              <span className="text-gray-600 ml-2">
+                Conectamos autoridad, banca y operación para crecer con certidumbre.
+              </span>
             </p>
           </div>
         </div>
@@ -72,58 +79,57 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up mb-20 relative z-30">
           <Button
             size="lg"
-            className="text-lg px-10 py-6 bg-gradient-to-r from-white to-white/95 text-primary hover:from-white/95 hover:to-white hover:scale-105 transition-all duration-300 shadow-2xl font-semibold border-2 border-white/20"
+            className="text-lg px-10 py-6 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white hover:from-green-600 hover:via-green-700 hover:to-green-800 hover:scale-105 transition-all duration-300 shadow-2xl font-semibold border-2 border-green-400/30 backdrop-blur-sm"
           >
             Solicitar cotización de trámites
           </Button>
           <Button
             size="lg"
-            className="text-lg px-10 py-6 bg-gradient-to-r from-accent to-accent/90 text-white hover:from-accent/90 hover:to-accent hover:scale-105 transition-all duration-300 shadow-2xl font-semibold border-2 border-accent/30"
+            className="text-lg px-10 py-6 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 hover:scale-105 transition-all duration-300 shadow-2xl font-semibold border-2 border-blue-400/30 backdrop-blur-sm"
           >
             Agendar diagnóstico integral
           </Button>
           <Button
-            variant="outline"
             size="lg"
-            className="text-lg px-10 py-6 border-2 border-white/80 text-white hover:bg-white hover:text-primary hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-sm font-semibold shadow-xl"
+            className="text-lg px-10 py-6 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 text-white hover:from-teal-600 hover:via-teal-700 hover:to-teal-800 hover:scale-105 transition-all duration-300 shadow-2xl font-semibold border-2 border-teal-400/30 backdrop-blur-sm"
           >
             Pedir reporte ESG
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20 relative z-30">
-          <Card className="p-4 text-center bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg border-white/40 hover:bg-white/35 transition-all duration-500 hover:scale-105 animate-float shadow-2xl">
-            <div className="text-2xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent mb-1 drop-shadow-lg">
+          <Card className="p-4 text-center bg-gradient-to-br from-green-50/90 to-green-100/80 backdrop-blur-lg border-green-200/60 hover:bg-green-100/90 transition-all duration-500 hover:scale-105 animate-float shadow-lg">
+            <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent mb-1">
               Certeza
             </div>
-            <div className="text-sm text-white font-medium drop-shadow-md">Regulatoria</div>
+            <div className="text-sm text-green-700 font-medium">Regulatoria</div>
           </Card>
           <Card
-            className="p-4 text-center bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg border-white/40 hover:bg-white/35 transition-all duration-500 hover:scale-105 animate-float shadow-2xl"
+            className="p-4 text-center bg-gradient-to-br from-blue-50/90 to-blue-100/80 backdrop-blur-lg border-blue-200/60 hover:bg-blue-100/90 transition-all duration-500 hover:scale-105 animate-float shadow-lg"
             style={{ animationDelay: "0.2s" }}
           >
-            <div className="text-2xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent mb-1 drop-shadow-lg">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-1">
               Financiamiento
             </div>
-            <div className="text-sm text-white font-medium drop-shadow-md">Verde</div>
+            <div className="text-sm text-blue-700 font-medium">Verde</div>
           </Card>
           <Card
-            className="p-4 text-center bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg border-white/40 hover:bg-white/35 transition-all duration-500 hover:scale-105 animate-float shadow-2xl"
+            className="p-4 text-center bg-gradient-to-br from-teal-50/90 to-teal-100/80 backdrop-blur-lg border-teal-200/60 hover:bg-teal-100/90 transition-all duration-500 hover:scale-105 animate-float shadow-lg"
             style={{ animationDelay: "0.4s" }}
           >
-            <div className="text-2xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent mb-1 drop-shadow-lg">
+            <div className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-teal-700 bg-clip-text text-transparent mb-1">
               Eficiencia
             </div>
-            <div className="text-sm text-white font-medium drop-shadow-md">Operativa</div>
+            <div className="text-sm text-teal-700 font-medium">Operativa</div>
           </Card>
           <Card
-            className="p-4 text-center bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-lg border-white/40 hover:bg-white/35 transition-all duration-500 hover:scale-105 animate-float shadow-2xl"
+            className="p-4 text-center bg-gradient-to-br from-emerald-50/90 to-emerald-100/80 backdrop-blur-lg border-emerald-200/60 hover:bg-emerald-100/90 transition-all duration-500 hover:scale-105 animate-float shadow-lg"
             style={{ animationDelay: "0.6s" }}
           >
-            <div className="text-2xl font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent mb-1 drop-shadow-lg">
+            <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent mb-1">
               Reputación
             </div>
-            <div className="text-sm text-white font-medium drop-shadow-md">y Licencia Social</div>
+            <div className="text-sm text-emerald-700 font-medium">y Licencia Social</div>
           </Card>
         </div>
       </div>

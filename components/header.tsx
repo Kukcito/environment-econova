@@ -8,7 +8,7 @@ export function Header() {
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 sticky top-0 z-50 shadow-lg">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
-          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             ENVIRONMENT ECONOVA
           </div>
         </Link>
