@@ -1,18 +1,24 @@
-import { Leaf, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="bg-gradient-to-br from-muted/40 via-muted/30 to-primary/5 border-t border-primary/20">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <Leaf className="h-5 w-5 text-primary-foreground" />
+            <div className="flex items-center">
+              <div className="h-16 w-64">
+                <Image
+                  src="/images/econova-logo.png"
+                  alt="ECONOVA Environment Logo"
+                  width={600}
+                  height={180}
+                  className="h-full w-full object-contain"
+                />
               </div>
-              <span className="text-xl font-bold text-primary">ECONOVA</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Sostenibilidad que protege vidas y agrega valor. Convertimos medio ambiente y seguridad en motor de
